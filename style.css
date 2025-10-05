@@ -1,0 +1,371 @@
+/*   Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/*  Color Variables*/
+:root {
+  --bg-color:  black;
+  --text-color: #EDEDED;
+  --accent-color: #A239CA;
+  --secondary-accent: #CA39AB ;
+  --card-color: #1B1B2F;
+}
+
+/*   Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: 0.3s;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+/*  Navbar*/
+header {
+  background: var(--card-color);
+  padding: 15px 10%;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--accent-color);
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+  background: var(--secondary-accent);
+  color: #fff;
+}
+
+/*  Home Section */
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 10%;
+  flex-wrap: wrap;
+}
+
+.home-img {
+  flex: 1;
+  text-align: center;
+}
+
+.home-img img {
+  width: 300px;
+  border-radius: 30%;
+  border: px solid var(--accent-color);
+}
+
+.home-content {
+  flex: 1;
+  padding: 20px;
+}
+
+.home-content h1 {
+  font-size: 2.5rem;
+  font-weight: 100;
+  color: var(--text-color);
+}
+
+.home-content h1 span {
+  color: var(--accent-color);
+}
+
+.home-content h3 {
+  font-size: 1.3rem;
+  margin: 10px 0;
+  color: var(--secondary-accent);
+}
+.typing-text  span{
+  font-size: 1.5rem;
+  color: #A239CA; /* your accent color */
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid #A239CA; /* cursor */
+  width: 0;
+  animation: typing 3s steps(20, end) forwards, blink 0.7s infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 16ch; } /* adjust to text length */
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+
+.home-content p {
+  margin: 20px 0;
+  color: var(--text-color);
+}
+
+.social-icons a {
+  font-size: 1.5rem;
+  margin-right: 15px;
+  color: var(--accent-color);
+}
+
+.social-icons a:hover {
+  color: var(--secondary-accent);
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 25px;
+  margin-top: 20px;
+  background: var(--accent-color);
+  color: white;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background: var(--secondary-accent);
+}
+/*  Sections General */
+section {
+  padding: 80px 10%;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--text-color);
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  width: 80px;
+  height: 4px;
+  background: var(--accent-color);
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 5px;
+}
+
+/*  Skills Section */
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.skill-box {
+  background: var(--card-color);
+  padding: 30px;
+  text-align: center;
+  border-radius: 15px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skill-box i {
+  font-size: 2.5rem;
+  color: var(--accent-color);
+  margin-bottom: 15px;
+}
+
+.skill-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/*   Projects Section */
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.project-card {
+  background: var(--card-color);
+  padding: 20px;
+  border-radius: 15px;
+  transition: 0.3s;
+}
+
+.project-card img {
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.project-card h3 {
+  color: var(--accent-color);
+}
+
+.project-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+/*   Education Section */
+.timeline {
+  border-left: 3px solid var(--accent-color);
+  padding-left: 20px;
+}
+
+.timeline-item {
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -11px;
+  top: 5px;
+  width: 15px;
+  height: 15px;
+  background: var(--secondary-accent);
+  border-radius: 50%;
+}
+
+.timeline-item h3 {
+  color: var(--accent-color);
+}
+
+/*  Contact Section */
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.contact-form {
+  flex: 1;
+  min-width: 280px;
+  background: var(--card-color);
+  padding: 25px;
+  border-radius: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  background: #2b2b40;
+  color: var(--text-color);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border: 2px solid var(--accent-color);
+}
+
+.contact-info {
+  flex: 1;
+  min-width: 250px;
+}
+
+.contact-info p {
+  margin: 10px 0;
+  font-weight: 500;
+}
+
+.contact-info i {
+  color: var(--accent-color);
+  margin-right: 8px;
+}
+
+/*  Footer */
+footer {
+  background: var(--card-color);
+  color: var(--text-color);
+  text-align: center;
+  padding: 30px 10%;
+}
+
+.footer-socials a {
+  color: var(--accent-color);
+  font-size: 1.5rem;
+  margin: 0 10px;
+  transition: 0.3s;
+}
+
+.footer-socials a:hover {
+  color: var(--secondary-accent);
+}
+
+/* Responsive Design*/
+@media (max-width: 992px) {
+  .home {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .home-img img {
+    margin-bottom: 20px;
+  }
+
+  .contact-container {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 600px) {
+  header {
+    padding: 10px 5%;
+  }
+
+  .nav-links {
+    display: none; /* Optional: hamburger menu can be added here */
+  }
+
+  .home-content h1 {
+    font-size: 2rem;
+  }
+
+  .section-title {
+    font-size: 1.6rem;
+  }
+}
